@@ -1,24 +1,26 @@
-const numColors = 18
-const numBrushes = 5
-const numTools = 10
+const garticNumColors = 18
+const garticNumBrushes = 5
+const garticNumTools = 8
 
-let color = 0
-let brush = 0
-let tool = 0
+let garticObj = {
+    color: 0,
+    brush: 0,
+    tool: 0
+}
 
 let garticKey = function (event) {
     switch (event.code) {
         case "F16":
-            tool = (tool + 1) % numTools
-            document.getElementsByClassName("tool")[tool].click()
+            garticObj.tool = (garticObj.tool + 1) % garticNumTools
+            document.getElementsByClassName("tool")[garticObj.tool].click()
             break
         case "F17":
-            brush = (brush + 1) % numBrushes
-            document.getElementsByClassName("brush")[brush].click()
+            garticObj.brush = (garticObj.brush + 1) % garticNumBrushes
+            document.getElementsByClassName("thickness")[garticObj.brush].click()
             break
         case "F18":
-            color = (color + 1) % numColors
-            document.getElementsByClassName("color")[color].click()
+            garticObj.color = (garticObj.color + 1) % garticNumColors
+            document.getElementsByClassName("color")[garticObj.color].click()
             break
         
     }
