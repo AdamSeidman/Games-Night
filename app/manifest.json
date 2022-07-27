@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Games Night Extension",
+    "version": "0.0.1",
+    "author": "Adam Seidman",
+    "short_name": "Games Night",
+    "content_scripts": [
+        {
+          "matches": [
+            "https://*/*",
+            "http://*/*"
+          ],
+          "js": ["content.js"]
+        }
+      ]
+}
