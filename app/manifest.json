@@ -10,7 +10,11 @@
             "https://*/*",
             "http://*/*"
           ],
-          "js": ["content.js"]
+          "js": [
+            "skribbl.js",
+            "gartic.js",
+            "content.js"
+          ]
         }
       ]
 }
