@@ -9,13 +9,13 @@ let skribblObj = {
 let skribblKey = function (event) {
     switch (event.code) {
         case "F15":
-            document.getElementsByClassName("tool")[0].click()
+            document.getElementsByClassName("tool")[2].click()
             break
         case "F16":
             document.getElementsByClassName("tool")[1].click()
             break
         case "F17":
-            document.getElementsByClassName("tool")[2].click()
+            document.getElementsByClassName("tool")[0].click()
             break
         case "F18":
             skribblObj.color = (skribblObj.color + 1) % skribblNumColors
