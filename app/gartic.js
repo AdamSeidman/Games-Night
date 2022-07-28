@@ -10,18 +10,25 @@ let garticObj = {
 
 let garticKey = function (event) {
     switch (event.code) {
-        case "F16":
+        case "F17":
             garticObj.tool = (garticObj.tool + 1) % garticNumTools
             document.getElementsByClassName("tool")[garticObj.tool].click()
-            break
-        case "F17":
-            garticObj.brush = (garticObj.brush + 1) % garticNumBrushes
-            document.getElementsByClassName("thickness")[garticObj.brush].click()
             break
         case "F18":
             garticObj.color = (garticObj.color + 1) % garticNumColors
             document.getElementsByClassName("color")[garticObj.color].click()
             break
-        
+        case "F19":
+            if (garticObj.brush < (garticNumBrushes - 1)) {
+                garticObj.brush += 1
+            }
+            document.getElementsByClassName("thickness")[garticObj.brush].click()
+            break
+        case "F20":
+            if (garticObj.brush > 0) {
+                garticObj.brush -= 1
+            }
+            document.getElementsByClassName("thickness")[garticObj.brush].click()
+            break
     }
 }
